@@ -1,0 +1,42 @@
+﻿@model BizPage_Back_End.Models.Card
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <i class="@Html.DisplayNameFor(model => model.Icon)"></i>
+        </dt>
+        <dd class = "col-sm-10">
+            <i class="@Html.DisplayFor(model => model.Icon)"></i>
+        </dd>
+        <dt class = "col-sm-2">
+            <img src="~/assets/Image/About/@Html.DisplayNameFor(model => model.Image)" alt="Alternate Text" />
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Plan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Plan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
